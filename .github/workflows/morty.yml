@@ -1,0 +1,13 @@
+name: Morty
+on: [push, pull_request]
+
+jobs:
+  morty:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Organize mortems
+      uses: mentimeter/morty@master
+      with:
+        token: ${{ github.token }}
+
